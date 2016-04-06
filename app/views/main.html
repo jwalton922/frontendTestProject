@@ -1,23 +1,29 @@
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
-</div>
-
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
-
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
-
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
+<div class="row">
+    <div class="col-sm-12">
+        <h3>Instructions</h3>
+        <p>
+            The main goal is for you to make a web application that will summarize and display data found here: <a target="_blank" href="https://rawgit.com/jwalton922/frontendTestProject/master/FrontEndTestData.json">https://rawgit.com/jwalton922/frontendTestProject/master/FrontEndTestData.json</a>            
+            Your application should be viewable by clicking the 'Your Page' link above.
+        </p>
+        <p>
+            Most of the data has five attributes: industry, state, number of employees, revenue, and date founded. Using this application, a user could answer questions like: "How many consulting companies in NY have more than 10 employees?" or "Have there been any manufacturing companies founded in California in the last five years?"
+        </p>
+        <h4>Requirements</h4>
+        <ul>
+            <li>Make all of your code changes off a branch. Create a pull request to submit your code when done.</li>
+            <li>Your app has to retrieve the data through an HTTP request in an Angular service.</li>
+            <li>After the data is loaded, display the values for each attribute in it's own table along with the total times that value was found</li>
+            <li>Transform date founded into age in years</li>
+            <li>Transform employees, revenue, and age into ranges so that there are not so many unique values. For instance, employees could be reported in 1-5, 5-10 10-25, 25-50,50+. Use at least three ranges for each attribute.</li>
+            <li>When a value in a table is clicked on, only show data (across all tables) that has that value. For instance, if a user clicks on "Manufacturing" in the Industry table, only show state, employee range, revenue range, and age range where the industry is "Manufacturing".</li>            
+            <li>Provide some styling to make the content easy to look at. You won't be judged by design ability, but the content needs to look clean.</li>
+            <li>When your project is evaluated, it will be cloned fresh, your branch will be checked out, 'bower install' will be run, then 'grunt serve'. Make sure these steps work for you before submitting.</li>
+        </ul>
+        <h4>Bonus Requirements</h4>
+        <ul>
+            <li>Use Bootstrap for styling - due to a bug, it's not included in the app. Figure out a way to include it and use it for your application view.</li>
+            <li>Allow each table to also be viewed as a Pie Chart. Use any charting library you like.</li>
+        </ul>
+    </div>
+  
 </div>

@@ -1,1 +1,55 @@
-<p>This is the page you should be editing</p>
+<a ng-click="filters={}">Clear Filters</a>
+<table border="1">
+	<tr>
+		<th>Industry</th>
+		<th>Count</th>
+	</tr>
+	<tr ng-repeat="(key, value) in data | filter:filters | groupBy: 'INDUSTRY'  ">
+		<td><a ng-click="filters.INDUSTRY = key">{{key}}</a></td>
+		<td>{{value.length}}</td>
+	</tr>
+</table>
+<hr/>
+<table border="1">
+	<tr>
+		<th>State</th>
+		<th>Count</th>
+	</tr>
+	<tr ng-repeat="(key, value) in data | filter:filters | groupBy: 'STATE'">
+		<td><a ng-click="filters.STATE = key">{{key}}</a></td>
+		<td>{{value.length}}</td>
+	</tr>
+</table>
+<hr/>
+<table border="1">
+	<tr>
+		<th>Age</th>
+		<th>Count</th>
+	</tr>
+	<tr ng-repeat="(key, value) in data | filter:filters | groupBy: 'Age'">
+		<td><a ng-click="filters.Age = key">{{key}}</a></td>
+		<td>{{value.length}}</td>
+	</tr>
+</table>
+<hr/>
+<table border="1">
+	<tr>
+		<th>No of employees</th>
+		<th>Count</th>
+	</tr>
+	<tr ng-repeat="(key, value) in data | filter:filters | groupBy: 'EmployeeNo'">
+		<td><a ng-click="filters.EmployeeNo = key">{{key}}</a></td>
+		<td>{{value.length}}</td>
+	</tr>
+</table>
+<hr/>
+<table border="1">
+	<tr>
+		<th>Revenue</th>
+		<th>Count</th>
+	</tr>
+	<tr ng-repeat="(key, value) in data  | filter:filters | groupBy: 'REVENUE'">
+		<td><a ng-click="filters.REVENUE = key">{{key}}</a></td>
+		<td>{{value.length}}</td>
+	</tr>
+</table>

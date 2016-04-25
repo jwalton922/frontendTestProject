@@ -15,8 +15,7 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch',
-    'angular.filter'
+    'ngTouch'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -26,12 +25,7 @@ angular
       })
       .when('/yourpage', {
         templateUrl: 'views/yourpage.html',
-        controller: 'YourPageCtrl',
-        resolve:{
-            data:function(YourPageService){
-              return YourPageService.getData();
-            }
-          }
+        controller: 'YourPageCtrl'
       })
       .otherwise({
         redirectTo: '/'
